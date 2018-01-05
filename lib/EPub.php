@@ -237,7 +237,7 @@ class EPub
         $title = $this->toc_xpath->query('x:navLabel/x:text', $node)->item(0)->nodeValue;
         $src = $this->toc_xpath->query('x:content', $node)->item(0)->attr('src');
         $src = $this->encodeComponentName ($src);
-        return array('title' => $title, 'src' => $src);
+        return array('title' => preg_replace('~[\r\n]+~', '', $title), 'src' => $src);
     }
 
     /**
