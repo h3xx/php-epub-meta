@@ -20,6 +20,7 @@
     ],
     "require": {
         "php": ">=5.3.0",
+        "ext-dom": "*",
         "ext-xml": "*",
         "ext-zip": "*",
         "seblucas/tbszip": "~2.16.0"
