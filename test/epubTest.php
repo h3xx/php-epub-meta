@@ -118,6 +118,14 @@ class EPubTest extends PHPUnit_Framework_TestCase {
         );
     }
 
+    public function testTitleNonStandardXMLPrefix() {
+        $epub = new EPub(__DIR__ . '/test-xml.epub');
+        $this->assertEquals(
+            $epub->Title(),
+            'Romeo and Juliet'
+        );
+    }
+
     public function testSubject(){
         // get current values
         $this->assertEquals(
